@@ -185,7 +185,7 @@ class _GameScreenState extends State<GameScreen> {
   void _showWinDialog(String winner) {
     showDialog(
       barrierDismissible: false,
-        context:context ,
+        context:context  ,
         builder: (BuildContext){
           return  AlertDialog(
             title: Text("WINNER IS : " + winner),
