@@ -154,7 +154,7 @@ class _GameScreenState extends State<GameScreen> {
         showOnDisplay[0] != "") {
       _showWinDialog(showOnDisplay[0]);
     }
-    else if(filledBoxes == 9){
+    else if(filledBoxes  == 9){
       _showDrawDialog();
     }
   }
@@ -163,9 +163,9 @@ class _GameScreenState extends State<GameScreen> {
     showDialog(
       barrierDismissible: false,
         context:context ,
-        builder: (BuildContext){
+        builder: ( constBuildContext){
           return  AlertDialog(
-            title: Text("Draw"),
+            title:const Text("Draw"),
 
           actions: [
             ElevatedButton(
@@ -173,7 +173,7 @@ class _GameScreenState extends State<GameScreen> {
                   _clearBoard();
                   Navigator.of(context).pop();
                 },
-                child: Text("Play Again"),
+                child:const Text("Play Again"),
             ),
           ],
           );
@@ -194,7 +194,7 @@ class _GameScreenState extends State<GameScreen> {
                   _clearBoard();
                   Navigator.of(context).pop();
                 },
-                child: Text("Play Again"),
+                child:const Text("Play Again"),
             ),
           ],);
         });
