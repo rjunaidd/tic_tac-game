@@ -44,6 +44,9 @@ class _GameScreenState extends State<GameScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("Player  O" ,style: playertextstyle,),
+                          SizedBox(
+                            height: size.height * 0.03,
+                          ),
                           Text(firstScore.toString() ,style: playertextstyle,),
                         ],
                       ),
@@ -54,6 +57,9 @@ class _GameScreenState extends State<GameScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("Player  X" , style: playertextstyle,),
+                          SizedBox(
+                            height: size.height * 0.03,
+                          ),
                           Text(exScore.toString() , style: playertextstyle,),
                         ],
                       ),
@@ -88,11 +94,7 @@ class _GameScreenState extends State<GameScreen> {
                 },
               ),
             ),
-            Expanded(
-                child: Container(
-                  color:  Colors.teal.shade800,
-                )
-            ),
+
           ],
         ),
       ),
@@ -183,7 +185,7 @@ class _GameScreenState extends State<GameScreen> {
   void _showWinDialog(String winner) {
     showDialog(
       barrierDismissible: false,
-        context:context ,
+        context:context  ,
         builder: (BuildContext){
           return  AlertDialog(
             title: Text("WINNER IS : " + winner),

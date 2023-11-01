@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return  SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey.shade900,
+        backgroundColor:  Colors.grey.shade900,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
